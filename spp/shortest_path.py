@@ -1,5 +1,6 @@
 import numpy as np
-from pydrake.all import MathematicalProgram, MosekSolver, eq
+from pydrake.all import MathematicalProgram, SolverOptions, MosekSolver, eq
+
 
 class ShortestPathVariables():
 
@@ -48,6 +49,7 @@ class ShortestPathVariables():
         l = result.GetSolution(vars.l)
 
         return ShortestPathVariables(phi, y, z, l)
+
 
 class ShortestPathConstraints():
 
@@ -105,7 +107,7 @@ class ShortestPathConstraints():
                         phi_v = phi_in - vars.phi[k1] - vars.phi[k2]
                         prog.AddLinearConstraint(phi_v >= 0)
                         graph.sets[vertex].add_perspective_constraint(prog,
-                            phi_v, z_in - vars.z[k1] - vars.y[k2])
+                                                                      phi_v, z_in - vars.z[k1] - vars.y[k2])
 
         # spatial nonnegativity (not stored)
         for k, edge in enumerate(graph.edges):
@@ -134,19 +136,19 @@ class ShortestPathConstraints():
 
         return ShortestPathConstraints(cons, deg, sp_cons, obj)
 
+
 class ShortestPathSolution():
 
     def __init__(self, cost, time, primal, dual):
-
         self.cost = cost
         self.time = time
         self.primal = primal
         self.dual = dual
 
+
 class ShortestPathProblem():
 
     def __init__(self, graph, relaxation=False):
-
         self.graph = graph
         self.relaxation = relaxation
 
@@ -154,10 +156,11 @@ class ShortestPathProblem():
         self.vars = ShortestPathVariables.populate_program(self.prog, graph, relaxation)
         self.constraints = ShortestPathConstraints.populate_program(self.prog, graph, self.vars)
         self.prog.AddLinearCost(sum(self.vars.l))
+        self.solver_options = SolverOptions()
+        self.solver_options.SetOption(MosekSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_SOLUTIONS", 1)
 
     def solve(self):
-
-        result = MosekSolver().Solve(self.prog)
+        result = MosekSolver().Solve(self.prog, solver_options=self.solver_options)
         cost = result.get_optimal_cost()
         time = result.get_solver_details().optimizer_time
         primal = ShortestPathVariables.from_result(result, self.vars)
