@@ -1714,4 +1714,1466 @@ Mixed integer optimizer terminated. Time: 7.83
 Optimizer terminated. Time: 7.86    
 
 
-Integer solut
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.9771403988e+02    nrm: 5e+01    Viol.  con: 4e-09    var: 0e+00    acc: 1e-07    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.53, probing time =  1.29
+Presolved problem: 8483 variables, 20678 constraints, 58648 non-zeros
+Presolved problem: 0 general integer, 832 binary, 7651 continuous
+Presolved problem: 832 cones
+Clique table size: 339
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.6531615392e+02     NA          3.9   
+Cut generation started.
+0        1        1        0        NA                   4.6531380917e+02     NA          10.4  
+0        2        1        0        NA                   4.6770395266e+02     NA          11.6  
+0        3        1        0        NA                   4.6897489460e+02     NA          13.1  
+Cut generation terminated. Time = 1.02
+0        5        1        0        6.8871701592e+02     4.6933396477e+02     31.85       15.6  
+
+Objective of best integer solution : 6.887170159163e+02      
+Best objective bound               : 4.693339647748e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 36
+  Number of CMIR cuts              : 21
+  Number of implied bound cuts     : 15
+Number of branches                 : 0
+Number of relaxations solved       : 5
+Number of interior point iterations: 173
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.53
+Time spend optimizing the root     : 1.00
+Mixed integer optimizer terminated. Time: 15.63
+
+Optimizer terminated. Time: 15.67   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.8871701592e+02    nrm: 5e+01    Viol.  con: 1e-08    var: 0e+00    acc: 1e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.50, probing time =  1.26
+Presolved problem: 8482 variables, 20681 constraints, 58655 non-zeros
+Presolved problem: 0 general integer, 832 binary, 7650 continuous
+Presolved problem: 832 cones
+Clique table size: 339
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.3758323403e+02     NA          3.9   
+Cut generation started.
+0        1        1        0        NA                   4.3759817032e+02     NA          9.5   
+0        2        1        0        NA                   4.4100437653e+02     NA          10.8  
+0        3        1        0        NA                   4.4251012703e+02     NA          12.2  
+Cut generation terminated. Time = 1.02
+6        12       7        2        NA                   4.4575602739e+02     NA          23.3  
+27       33       28       4        NA                   4.5007120891e+02     NA          32.9  
+51       57       52       7        NA                   4.5191278209e+02     NA          44.4  
+99       106      94       12       NA                   4.5191278209e+02     NA          65.2  
+187      196      164      22       NA                   4.5191278209e+02     NA          98.4  
+333      344      202      14       6.1835167642e+02     4.5344740412e+02     26.67       138.8 
+
+Objective of best integer solution : 6.183516764194e+02      
+Best objective bound               : 4.534474041236e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 44
+  Number of CMIR cuts              : 28
+  Number of implied bound cuts     : 16
+Number of branches                 : 333
+Number of relaxations solved       : 344
+Number of interior point iterations: 11466
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.50
+Time spend optimizing the root     : 1.05
+Mixed integer optimizer terminated. Time: 138.76
+
+Optimizer terminated. Time: 138.81  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.1835167642e+02    nrm: 5e+01    Viol.  con: 1e-08    var: 6e-12    acc: 9e-11    itg: 1e-06  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.49, probing time =  1.25
+Presolved problem: 8480 variables, 20682 constraints, 58661 non-zeros
+Presolved problem: 0 general integer, 832 binary, 7648 continuous
+Presolved problem: 832 cones
+Clique table size: 342
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.1659584870e+02     NA          4.0   
+Cut generation started.
+0        1        1        0        NA                   4.1659611512e+02     NA          11.3  
+0        2        1        0        NA                   4.1966215299e+02     NA          12.7  
+0        3        1        0        NA                   4.2125774301e+02     NA          14.1  
+Cut generation terminated. Time = 1.03
+6        12       7        2        NA                   4.2365258267e+02     NA          26.9  
+27       33       28       5        NA                   4.2784125011e+02     NA          36.9  
+49       55       46       8        NA                   4.3257668891e+02     NA          46.9  
+89       96       80       13       NA                   4.3257668891e+02     NA          66.1  
+169      178      130      18       NA                   4.3257668891e+02     NA          96.5  
+296      299      173      16       6.7304781836e+02     4.3257668891e+02     35.73       136.9 
+
+Objective of best integer solution : 6.730478183593e+02      
+Best objective bound               : 4.325766889050e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 33
+  Number of CMIR cuts              : 18
+  Number of implied bound cuts     : 15
+Number of branches                 : 296
+Number of relaxations solved       : 299
+Number of interior point iterations: 11231
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.49
+Time spend optimizing the root     : 1.20
+Mixed integer optimizer terminated. Time: 136.89
+
+Optimizer terminated. Time: 136.94  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.7304781836e+02    nrm: 5e+01    Viol.  con: 2e-09    var: 2e-11    acc: 1e-10    itg: 2e-09  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.66, probing time =  1.40
+Presolved problem: 9064 variables, 22127 constraints, 62799 non-zeros
+Presolved problem: 0 general integer, 889 binary, 8175 continuous
+Presolved problem: 889 cones
+Clique table size: 357
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.9879759694e+02     NA          4.2   
+Cut generation started.
+0        1        1        0        NA                   3.9879769583e+02     NA          11.5  
+0        2        1        0        NA                   3.9958849450e+02     NA          12.9  
+Cut generation terminated. Time = 0.73
+8        13       9        3        NA                   4.0686656195e+02     NA          29.2  
+19       25       18       4        NA                   4.1095344175e+02     NA          36.5  
+33       40       32       6        NA                   4.1095344175e+02     NA          43.9  
+65       72       64       10       NA                   4.1095344175e+02     NA          60.1  
+129      139      112      17       NA                   4.1095344175e+02     NA          88.8  
+241      253      160      4        6.0969746434e+02     4.1221272936e+02     32.39       126.4 
+
+Objective of best integer solution : 6.096974643361e+02      
+Best objective bound               : 4.122127293587e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 28
+  Number of CMIR cuts              : 12
+  Number of implied bound cuts     : 16
+Number of branches                 : 241
+Number of relaxations solved       : 253
+Number of interior point iterations: 9047
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.66
+Time spend optimizing the root     : 1.15
+Mixed integer optimizer terminated. Time: 126.44
+
+Optimizer terminated. Time: 126.50  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.0969746434e+02    nrm: 5e+01    Viol.  con: 3e-09    var: 0e+00    acc: 1e-10    itg: 4e-08  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.43, probing time =  1.22
+Presolved problem: 8336 variables, 20296 constraints, 57574 non-zeros
+Presolved problem: 0 general integer, 818 binary, 7518 continuous
+Presolved problem: 818 cones
+Clique table size: 337
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.5699378654e+02     NA          3.6   
+Cut generation started.
+0        1        1        0        NA                   4.5698500507e+02     NA          8.5   
+0        2        1        0        NA                   4.6145246329e+02     NA          9.7   
+0        3        1        0        NA                   4.6268297991e+02     NA          10.9  
+0        4        1        0        NA                   4.6353648148e+02     NA          12.4  
+Cut generation terminated. Time = 1.27
+0        6        1        0        7.7345647612e+02     4.6366864923e+02     40.05       14.8  
+
+Objective of best integer solution : 7.734564761161e+02      
+Best objective bound               : 4.636686492278e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 40
+  Number of CMIR cuts              : 24
+  Number of implied bound cuts     : 16
+Number of branches                 : 0
+Number of relaxations solved       : 6
+Number of interior point iterations: 188
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.43
+Time spend optimizing the root     : 0.77
+Mixed integer optimizer terminated. Time: 14.76
+
+Optimizer terminated. Time: 14.79   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 7.7345647612e+02    nrm: 5e+01    Viol.  con: 2e-09    var: 0e+00    acc: 5e-09    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.58, probing time =  1.34
+Presolved problem: 8863 variables, 21589 constraints, 61275 non-zeros
+Presolved problem: 0 general integer, 869 binary, 7994 continuous
+Presolved problem: 869 cones
+Clique table size: 350
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.3628428859e+02     NA          4.2   
+Cut generation started.
+0        1        1        0        NA                   4.3628927386e+02     NA          9.6   
+0        2        1        0        NA                   4.3814152851e+02     NA          11.0  
+0        3        1        0        NA                   4.3864090552e+02     NA          12.5  
+Cut generation terminated. Time = 1.07
+0        5        1        0        7.1929717613e+02     4.3873571579e+02     39.00       15.4  
+
+Objective of best integer solution : 7.192971761299e+02      
+Best objective bound               : 4.387357157942e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 34
+  Number of CMIR cuts              : 17
+  Number of implied bound cuts     : 17
+Number of branches                 : 0
+Number of relaxations solved       : 5
+Number of interior point iterations: 165
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.58
+Time spend optimizing the root     : 1.23
+Mixed integer optimizer terminated. Time: 15.42
+
+Optimizer terminated. Time: 15.45   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 7.1929717613e+02    nrm: 5e+01    Viol.  con: 3e-07    var: 0e+00    acc: 7e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.59, probing time =  1.35
+Presolved problem: 8862 variables, 21592 constraints, 61282 non-zeros
+Presolved problem: 0 general integer, 869 binary, 7993 continuous
+Presolved problem: 869 cones
+Clique table size: 350
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.0959146491e+02     NA          4.1   
+Cut generation started.
+0        1        1        0        NA                   4.0958738784e+02     NA          10.6  
+0        2        1        0        NA                   4.1224549419e+02     NA          12.1  
+Cut generation terminated. Time = 0.67
+8        13       9        3        NA                   4.1514037039e+02     NA          28.8  
+19       24       20       3        NA                   4.1816592133e+02     NA          35.4  
+53       58       54       7        NA                   4.1816592133e+02     NA          53.2  
+101      108      92       12       NA                   4.1816592133e+02     NA          77.7  
+189      196      152      4        NA                   4.1816592133e+02     NA          113.5 
+336      343      201      25       NA                   4.1854166005e+02     NA          158.4 
+490      495      263      7        6.4824762656e+02     4.2317595211e+02     34.72       200.7 
+
+Objective of best integer solution : 6.482476265552e+02      
+Best objective bound               : 4.231759521142e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 29
+  Number of CMIR cuts              : 14
+  Number of implied bound cuts     : 15
+Number of branches                 : 490
+Number of relaxations solved       : 495
+Number of interior point iterations: 16785
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.59
+Time spend optimizing the root     : 1.13
+Mixed integer optimizer terminated. Time: 200.72
+
+Optimizer terminated. Time: 200.77  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.4824762656e+02    nrm: 5e+01    Viol.  con: 4e-08    var: 0e+00    acc: 6e-16    itg: 8e-08  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.59, probing time =  1.35
+Presolved problem: 8918 variables, 21742 constraints, 61718 non-zeros
+Presolved problem: 0 general integer, 875 binary, 8043 continuous
+Presolved problem: 875 cones
+Clique table size: 355
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.8988625834e+02     NA          4.1   
+Cut generation started.
+0        1        1        0        NA                   3.8988767253e+02     NA          10.8  
+0        2        1        0        NA                   3.9262978824e+02     NA          12.0  
+0        3        1        0        NA                   3.9307287707e+02     NA          13.4  
+0        4        1        0        NA                   3.9374888508e+02     NA          14.8  
+Cut generation terminated. Time = 1.38
+6        13       7        2        NA                   3.9876876571e+02     NA          27.7  
+18       25       17       4        NA                   4.0049563326e+02     NA          34.5  
+28       36       23       4        NA                   4.0049563326e+02     NA          40.3  
+44       52       39       6        NA                   4.0049563326e+02     NA          48.7  
+76       85       69       10       NA                   4.0049563326e+02     NA          64.6  
+140      151      127      17       NA                   4.0049563326e+02     NA          86.6  
+260      279      175      4        5.7694380376e+02     4.0533154046e+02     29.75       117.6 
+
+Objective of best integer solution : 5.769438037586e+02      
+Best objective bound               : 4.053315404585e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 37
+  Number of CMIR cuts              : 20
+  Number of implied bound cuts     : 17
+Number of branches                 : 260
+Number of relaxations solved       : 279
+Number of interior point iterations: 9845
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.59
+Time spend optimizing the root     : 1.14
+Mixed integer optimizer terminated. Time: 117.64
+
+Optimizer terminated. Time: 117.70  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.7694380376e+02    nrm: 5e+01    Viol.  con: 3e-05    var: 0e+00    acc: 6e-16    itg: 7e-06  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.72, probing time =  1.46
+Presolved problem: 9444 variables, 23038 constraints, 65426 non-zeros
+Presolved problem: 0 general integer, 926 binary, 8518 continuous
+Presolved problem: 926 cones
+Clique table size: 368
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.7366566847e+02     NA          4.1   
+Cut generation started.
+0        1        1        0        NA                   3.7366535965e+02     NA          12.2  
+0        2        1        0        NA                   3.7432378122e+02     NA          13.6  
+Cut generation terminated. Time = 0.73
+8        13       9        3        NA                   3.7764222282e+02     NA          31.4  
+19       24       20       4        NA                   3.7764222282e+02     NA          37.8  
+33       38       34       6        NA                   3.7764222282e+02     NA          45.6  
+65       70       64       10       NA                   3.7764222282e+02     NA          63.5  
+129      137      112      16       NA                   3.7764222282e+02     NA          96.9  
+241      253      174      28       5.6113223641e+02     3.7764222282e+02     32.70       137.5 
+
+Objective of best integer solution : 5.611322364088e+02      
+Best objective bound               : 3.776422228178e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 28
+  Number of CMIR cuts              : 9
+  Number of implied bound cuts     : 19
+Number of branches                 : 241
+Number of relaxations solved       : 253
+Number of interior point iterations: 8801
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.72
+Time spend optimizing the root     : 0.99
+Mixed integer optimizer terminated. Time: 137.51
+
+Optimizer terminated. Time: 137.56  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.6113223641e+02    nrm: 5e+01    Viol.  con: 8e-09    var: 0e+00    acc: 6e-16    itg: 5e-08  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.41, probing time =  1.21
+Presolved problem: 8448 variables, 20569 constraints, 58369 non-zeros
+Presolved problem: 0 general integer, 829 binary, 7619 continuous
+Presolved problem: 829 cones
+Clique table size: 343
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.2723443074e+02     NA          3.9   
+0        1        1        0        7.0911400384e+02     4.2723443074e+02     39.75       5.0   
+
+Objective of best integer solution : 7.091140038433e+02      
+Best objective bound               : 4.272344307384e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 0
+Number of branches                 : 0
+Number of relaxations solved       : 1
+Number of interior point iterations: 34
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.41
+Time spend optimizing the root     : 1.10
+Mixed integer optimizer terminated. Time: 5.05
+
+Optimizer terminated. Time: 5.08    
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 7.0911400384e+02    nrm: 5e+01    Viol.  con: 2e-07    var: 0e+00    acc: 7e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.56, probing time =  1.33
+Presolved problem: 8975 variables, 21862 constraints, 62070 non-zeros
+Presolved problem: 0 general integer, 880 binary, 8095 continuous
+Presolved problem: 880 cones
+Clique table size: 356
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.0845227183e+02     NA          4.2   
+0        1        1        0        7.5693954214e+02     4.0845227183e+02     46.04       6.4   
+
+Objective of best integer solution : 7.569395421374e+02      
+Best objective bound               : 4.084522718303e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 0
+Number of branches                 : 0
+Number of relaxations solved       : 1
+Number of interior point iterations: 37
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.56
+Time spend optimizing the root     : 1.27
+Mixed integer optimizer terminated. Time: 6.36
+
+Optimizer terminated. Time: 6.39    
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 7.5693954214e+02    nrm: 5e+01    Viol.  con: 5e-07    var: 0e+00    acc: 5e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.55, probing time =  1.31
+Presolved problem: 9033 variables, 22015 constraints, 62509 non-zeros
+Presolved problem: 0 general integer, 886 binary, 8147 continuous
+Presolved problem: 886 cones
+Clique table size: 358
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.8287895257e+02     NA          4.0   
+Cut generation started.
+0        1        1        0        NA                   3.8287209567e+02     NA          10.7  
+0        2        1        0        NA                   3.8522028379e+02     NA          12.3  
+0        3        1        0        NA                   3.8572088201e+02     NA          13.6  
+Cut generation terminated. Time = 1.02
+6        12       7        2        NA                   3.9202914726e+02     NA          27.3  
+20       27       21       3        NA                   3.9633932165e+02     NA          36.6  
+32       40       31       5        NA                   3.9633932165e+02     NA          42.7  
+56       64       55       8        NA                   3.9633932165e+02     NA          55.2  
+104      112      89       13       NA                   3.9633932165e+02     NA          76.4  
+192      202      125      20       6.5781058150e+02     3.9633932165e+02     39.75       107.8 
+
+Objective of best integer solution : 6.578105815021e+02      
+Best objective bound               : 3.963393216526e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 37
+  Number of CMIR cuts              : 18
+  Number of implied bound cuts     : 19
+Number of branches                 : 192
+Number of relaxations solved       : 202
+Number of interior point iterations: 7102
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.55
+Time spend optimizing the root     : 1.08
+Mixed integer optimizer terminated. Time: 107.81
+
+Optimizer terminated. Time: 107.87  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.5781058150e+02    nrm: 6e+01    Viol.  con: 5e-09    var: 2e-10    acc: 4e-10    itg: 2e-10  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.57, probing time =  1.32
+Presolved problem: 9030 variables, 22015 constraints, 62513 non-zeros
+Presolved problem: 0 general integer, 886 binary, 8144 continuous
+Presolved problem: 886 cones
+Clique table size: 361
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.6516305757e+02     NA          3.8   
+Cut generation started.
+0        1        1        0        NA                   3.6513295883e+02     NA          13.1  
+0        2        1        0        NA                   3.6661003102e+02     NA          14.9  
+Cut generation terminated. Time = 0.68
+8        13       9        2        NA                   3.6827554439e+02     NA          29.5  
+25       31       26       4        NA                   3.7323453870e+02     NA          40.3  
+49       58       50       7        NA                   3.7323453870e+02     NA          54.5  
+97       106      96       13       NA                   3.7323453870e+02     NA          77.7  
+193      204      138      23       NA                   3.7323453870e+02     NA          112.8 
+324      334      201      12       6.0384961913e+02     3.7458305850e+02     37.97       156.3 
+
+Objective of best integer solution : 6.038496191283e+02      
+Best objective bound               : 3.745830584967e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 29
+  Number of CMIR cuts              : 10
+  Number of implied bound cuts     : 19
+Number of branches                 : 324
+Number of relaxations solved       : 334
+Number of interior point iterations: 12609
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.57
+Time spend optimizing the root     : 0.91
+Mixed integer optimizer terminated. Time: 156.34
+
+Optimizer terminated. Time: 156.40  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.0384961913e+02    nrm: 5e+01    Viol.  con: 2e-07    var: 0e+00    acc: 7e-16    itg: 3e-07  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.64, probing time =  1.38
+Presolved problem: 9556 variables, 23311 constraints, 66221 non-zeros
+Presolved problem: 0 general integer, 937 binary, 8619 continuous
+Presolved problem: 937 cones
+Clique table size: 374
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.5070853301e+02     NA          4.3   
+Cut generation started.
+0        1        1        0        NA                   3.5072137659e+02     NA          11.1  
+0        2        1        0        NA                   3.5135674094e+02     NA          12.6  
+0        3        1        0        NA                   3.5202480749e+02     NA          14.0  
+Cut generation terminated. Time = 1.09
+6        12       7        2        NA                   3.5978127067e+02     NA          29.6  
+19       25       20       4        NA                   3.6301868802e+02     NA          38.3  
+33       41       32       5        NA                   3.6301868802e+02     NA          47.6  
+65       74       64       9        NA                   3.6301868802e+02     NA          66.1  
+129      139      118      16       NA                   3.6301868802e+02     NA          100.6 
+241      252      170      28       5.8613099926e+02     3.6301868802e+02     38.07       140.9 
+
+Objective of best integer solution : 5.861309992642e+02      
+Best objective bound               : 3.630186880197e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 30
+  Number of CMIR cuts              : 11
+  Number of implied bound cuts     : 19
+Number of branches                 : 241
+Number of relaxations solved       : 252
+Number of interior point iterations: 9024
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.64
+Time spend optimizing the root     : 1.34
+Mixed integer optimizer terminated. Time: 140.85
+
+Optimizer terminated. Time: 140.91  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.8613099926e+02    nrm: 5e+01    Viol.  con: 2e-09    var: 0e+00    acc: 3e-11    itg: 8e-07  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.45, probing time =  1.23
+Presolved problem: 8489 variables, 20680 constraints, 58677 non-zeros
+Presolved problem: 0 general integer, 833 binary, 7656 continuous
+Presolved problem: 833 cones
+Clique table size: 342
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.1066939265e+02     NA          3.8   
+0        1        1        0        6.8762150225e+02     4.1066939265e+02     40.28       5.1   
+
+Objective of best integer solution : 6.876215022512e+02      
+Best objective bound               : 4.106693926531e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 0
+Number of branches                 : 0
+Number of relaxations solved       : 1
+Number of interior point iterations: 33
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.45
+Time spend optimizing the root     : 0.98
+Mixed integer optimizer terminated. Time: 5.14
+
+Optimizer terminated. Time: 5.17    
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.8762150225e+02    nrm: 5e+01    Viol.  con: 2e-07    var: 0e+00    acc: 1e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.62, probing time =  1.37
+Presolved problem: 9075 variables, 22124 constraints, 62812 non-zeros
+Presolved problem: 0 general integer, 890 binary, 8185 continuous
+Presolved problem: 890 cones
+Clique table size: 357
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.9299793534e+02     NA          3.8   
+0        1        1        0        7.5669450073e+02     3.9299793534e+02     48.06       5.1   
+
+Objective of best integer solution : 7.566945007315e+02      
+Best objective bound               : 3.929979353387e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 0
+Number of branches                 : 0
+Number of relaxations solved       : 1
+Number of interior point iterations: 29
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.62
+Time spend optimizing the root     : 0.85
+Mixed integer optimizer terminated. Time: 5.15
+
+Optimizer terminated. Time: 5.18    
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 7.5669450073e+02    nrm: 5e+01    Viol.  con: 1e-07    var: 0e+00    acc: 6e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.57, probing time =  1.34
+Presolved problem: 9074 variables, 22127 constraints, 62819 non-zeros
+Presolved problem: 0 general integer, 890 binary, 8184 continuous
+Presolved problem: 890 cones
+Clique table size: 357
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.6796272074e+02     NA          3.8   
+Cut generation started.
+0        1        1        0        NA                   3.6793253723e+02     NA          10.0  
+0        2        1        0        NA                   3.6925157812e+02     NA          11.4  
+0        3        1        0        NA                   3.7042042058e+02     NA          13.4  
+Cut generation terminated. Time = 1.08
+0        5        1        0        6.9422761433e+02     3.7042042058e+02     46.64       16.8  
+
+Objective of best integer solution : 6.942276143334e+02      
+Best objective bound               : 3.704204205781e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 28
+  Number of CMIR cuts              : 8
+  Number of implied bound cuts     : 20
+Number of branches                 : 0
+Number of relaxations solved       : 5
+Number of interior point iterations: 187
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.57
+Time spend optimizing the root     : 0.87
+Mixed integer optimizer terminated. Time: 16.85
+
+Optimizer terminated. Time: 16.88   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.9422761433e+02    nrm: 5e+01    Viol.  con: 9e-09    var: 0e+00    acc: 8e-09    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.58, probing time =  1.34
+Presolved problem: 9071 variables, 22126 constraints, 62821 non-zeros
+Presolved problem: 0 general integer, 890 binary, 8181 continuous
+Presolved problem: 890 cones
+Clique table size: 360
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.5125322039e+02     NA          3.8   
+Cut generation started.
+0        1        1        0        NA                   3.5123608284e+02     NA          10.9  
+0        2        1        0        NA                   3.5270433780e+02     NA          12.5  
+Cut generation terminated. Time = 0.72
+0        4        1        0        6.6352027007e+02     3.5296777039e+02     46.80       16.1  
+
+Objective of best integer solution : 6.635202700651e+02      
+Best objective bound               : 3.529677703859e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 33
+  Number of CMIR cuts              : 10
+  Number of implied bound cuts     : 23
+Number of branches                 : 0
+Number of relaxations solved       : 4
+Number of interior point iterations: 140
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.58
+Time spend optimizing the root     : 0.82
+Mixed integer optimizer terminated. Time: 16.14
+
+Optimizer terminated. Time: 16.17   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.6352027007e+02    nrm: 5e+01    Viol.  con: 5e-09    var: 0e+00    acc: 4e-09    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.67, probing time =  1.41
+Presolved problem: 9656 variables, 23573 constraints, 66963 non-zeros
+Presolved problem: 0 general integer, 947 binary, 8709 continuous
+Presolved problem: 947 cones
+Clique table size: 375
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.3791672068e+02     NA          4.0   
+Cut generation started.
+0        1        1        0        NA                   3.3791642884e+02     NA          10.7  
+0        2        1        0        NA                   3.3846810021e+02     NA          12.7  
+0        3        1        0        NA                   3.3908122261e+02     NA          15.0  
+Cut generation terminated. Time = 1.10
+6        12       7        2        NA                   3.3959718000e+02     NA          30.1  
+23       29       24       4        NA                   3.4186232853e+02     NA          40.1  
+47       53       48       7        NA                   3.4186232853e+02     NA          53.4  
+95       102      88       13       NA                   3.4186232853e+02     NA          79.2  
+183      193      156      21       NA                   3.4186232853e+02     NA          123.7 
+332      337      219      9        5.7789330503e+02     3.4276563008e+02     40.69       178.7 
+
+Objective of best integer solution : 5.778933050312e+02      
+Best objective bound               : 3.427656300788e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 39
+  Number of CMIR cuts              : 13
+  Number of implied bound cuts     : 26
+Number of branches                 : 332
+Number of relaxations solved       : 337
+Number of interior point iterations: 11381
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.67
+Time spend optimizing the root     : 1.01
+Mixed integer optimizer terminated. Time: 178.70
+
+Optimizer terminated. Time: 178.76  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.7789330503e+02    nrm: 5e+01    Viol.  con: 1e-07    var: 1e-10    acc: 2e-09    itg: 6e-06  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.45, probing time =  1.24
+Presolved problem: 8014 variables, 19314 constraints, 54691 non-zeros
+Presolved problem: 0 general integer, 783 binary, 7231 continuous
+Presolved problem: 783 cones
+Clique table size: 330
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.7667095978e+02     NA          3.7   
+Cut generation started.
+0        1        1        0        NA                   4.7666510526e+02     NA          8.5   
+0        2        1        0        NA                   4.8158598382e+02     NA          9.6   
+0        3        1        0        NA                   4.8439593311e+02     NA          10.9  
+0        4        1        0        NA                   4.8593164439e+02     NA          12.3  
+Cut generation terminated. Time = 1.27
+0        6        1        0        6.6319081895e+02     4.8594453156e+02     26.73       17.4  
+
+Objective of best integer solution : 6.631908189506e+02      
+Best objective bound               : 4.859445315590e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 53
+  Number of CMIR cuts              : 28
+  Number of implied bound cuts     : 25
+Number of branches                 : 0
+Number of relaxations solved       : 6
+Number of interior point iterations: 193
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.45
+Time spend optimizing the root     : 0.94
+Mixed integer optimizer terminated. Time: 17.45
+
+Optimizer terminated. Time: 17.48   
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.6319081895e+02    nrm: 5e+01    Viol.  con: 1e-07    var: 0e+00    acc: 1e-08    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.60, probing time =  1.37
+Presolved problem: 8544 variables, 20598 constraints, 58360 non-zeros
+Presolved problem: 0 general integer, 834 binary, 7710 continuous
+Presolved problem: 834 cones
+Clique table size: 343
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.5454757816e+02     NA          4.0   
+0        1        1        0        6.9536248361e+02     4.5454757816e+02     34.63       5.2   
+
+Objective of best integer solution : 6.953624836139e+02      
+Best objective bound               : 4.545475781578e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 0
+Number of branches                 : 0
+Number of relaxations solved       : 1
+Number of interior point iterations: 34
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.60
+Time spend optimizing the root     : 1.05
+Mixed integer optimizer terminated. Time: 5.20
+
+Optimizer terminated. Time: 5.24    
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.9536248361e+02    nrm: 5e+01    Viol.  con: 1e-08    var: 0e+00    acc: 2e-09    itg: 0e+00  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.60, probing time =  1.36
+Presolved problem: 8602 variables, 20752 constraints, 58801 non-zeros
+Presolved problem: 0 general integer, 840 binary, 7762 continuous
+Presolved problem: 840 cones
+Clique table size: 345
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.2656714617e+02     NA          4.0   
+Cut generation started.
+0        1        1        0        NA                   4.2656820947e+02     NA          10.8  
+0        2        1        0        NA                   4.3037606483e+02     NA          12.1  
+0        3        1        0        NA                   4.3168985964e+02     NA          13.9  
+Cut generation terminated. Time = 1.07
+6        12       7        2        NA                   4.4435818482e+02     NA          24.6  
+25       31       26       5        NA                   4.4647009143e+02     NA          33.8  
+49       55       50       8        NA                   4.4647009143e+02     NA          45.2  
+97       107      84       13       NA                   4.4647009143e+02     NA          69.9  
+177      190      126      21       NA                   4.4647009143e+02     NA          100.3 
+297      309      162      5        6.0478567835e+02     4.4647009143e+02     26.18       133.0 
+
+Objective of best integer solution : 6.047856783518e+02      
+Best objective bound               : 4.464700914251e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 51
+  Number of CMIR cuts              : 26
+  Number of implied bound cuts     : 25
+Number of branches                 : 297
+Number of relaxations solved       : 309
+Number of interior point iterations: 10756
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.60
+Time spend optimizing the root     : 1.04
+Mixed integer optimizer terminated. Time: 133.04
+
+Optimizer terminated. Time: 133.09  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.0478567835e+02    nrm: 5e+01    Viol.  con: 2e-09    var: 0e+00    acc: 1e-10    itg: 2e-10  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.56, probing time =  1.33
+Presolved problem: 8601 variables, 20754 constraints, 58809 non-zeros
+Presolved problem: 0 general integer, 840 binary, 7761 continuous
+Presolved problem: 840 cones
+Clique table size: 348
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.0554915780e+02     NA          4.1   
+Cut generation started.
+0        1        1        0        NA                   4.0554932218e+02     NA          9.8   
+0        2        1        0        NA                   4.0917815234e+02     NA          11.2  
+0        3        1        0        NA                   4.1097809403e+02     NA          12.5  
+Cut generation terminated. Time = 0.99
+6        12       7        2        NA                   4.1310184267e+02     NA          24.6  
+25       32       24       4        NA                   4.1505145103e+02     NA          35.2  
+47       56       40       7        NA                   4.1512089357e+02     NA          45.3  
+87       96       76       12       NA                   4.1512089357e+02     NA          63.7  
+159      168      134      20       NA                   4.1512089357e+02     NA          92.1  
+287      291      178      31       6.4688767049e+02     4.1512089357e+02     35.83       126.5 
+
+Objective of best integer solution : 6.468876704923e+02      
+Best objective bound               : 4.151208935654e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 50
+  Number of CMIR cuts              : 22
+  Number of implied bound cuts     : 28
+Number of branches                 : 287
+Number of relaxations solved       : 291
+Number of interior point iterations: 10457
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.56
+Time spend optimizing the root     : 1.22
+Mixed integer optimizer terminated. Time: 126.51
+
+Optimizer terminated. Time: 126.56  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.4688767049e+02    nrm: 5e+01    Viol.  con: 8e-08    var: 7e-11    acc: 8e-10    itg: 5e-06  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.75, probing time =  1.50
+Presolved problem: 9130 variables, 22041 constraints, 62485 non-zeros
+Presolved problem: 0 general integer, 891 binary, 8239 continuous
+Presolved problem: 891 cones
+Clique table size: 361
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.8809796950e+02     NA          4.5   
+Cut generation started.
+0        1        1        0        NA                   3.8809736790e+02     NA          13.2  
+0        2        1        0        NA                   3.8925222809e+02     NA          15.0  
+0        3        1        0        NA                   3.9017229091e+02     NA          16.6  
+Cut generation terminated. Time = 1.02
+6        12       7        2        NA                   3.9627350710e+02     NA          31.2  
+19       26       20       4        NA                   3.9897005794e+02     NA          39.9  
+33       40       34       6        NA                   4.0076703039e+02     NA          46.3  
+65       72       62       9        NA                   4.0076703039e+02     NA          63.3  
+121      129      110      15       NA                   4.0076703039e+02     NA          90.5  
+225      232      176      25       5.5746873174e+02     4.0076703039e+02     28.11       128.4 
+
+Objective of best integer solution : 5.574687317386e+02      
+Best objective bound               : 4.007670303885e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 45
+  Number of CMIR cuts              : 13
+  Number of implied bound cuts     : 32
+Number of branches                 : 225
+Number of relaxations solved       : 232
+Number of interior point iterations: 8035
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.75
+Time spend optimizing the root     : 1.39
+Mixed integer optimizer terminated. Time: 128.36
+
+Optimizer terminated. Time: 128.41  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.5746873174e+02    nrm: 5e+01    Viol.  con: 1e-07    var: 0e+00    acc: 6e-16    itg: 9e-07  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.40, probing time =  1.20
+Presolved problem: 8330 variables, 20264 constraints, 57494 non-zeros
+Presolved problem: 0 general integer, 817 binary, 7513 continuous
+Presolved problem: 817 cones
+Clique table size: 338
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.5544343883e+02     NA          3.5   
+Cut generation started.
+0        1        1        0        NA                   4.5543701083e+02     NA          10.6  
+0        2        1        0        NA                   4.6075453498e+02     NA          11.8  
+0        3        1        0        NA                   4.6309546517e+02     NA          13.1  
+0        4        1        0        NA                   4.6419798992e+02     NA          14.3  
+Cut generation terminated. Time = 1.25
+6        13       7        2        NA                   4.6945394030e+02     NA          25.5  
+19       27       18       3        NA                   4.7778244815e+02     NA          33.0  
+31       39       30       5        NA                   4.7778244815e+02     NA          38.7  
+55       66       44       7        NA                   4.7778244815e+02     NA          49.8  
+95       106      74       11       NA                   4.7778244815e+02     NA          65.5  
+167      179      124      20       NA                   4.7778244815e+02     NA          88.7  
+287      300      144      18       5.9015632849e+02     4.7778244815e+02     19.04       116.2 
+
+Objective of best integer solution : 5.901563284922e+02      
+Best objective bound               : 4.777824481525e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 46
+  Number of CMIR cuts              : 27
+  Number of implied bound cuts     : 19
+Number of branches                 : 287
+Number of relaxations solved       : 300
+Number of interior point iterations: 10337
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.40
+Time spend optimizing the root     : 0.79
+Mixed integer optimizer terminated. Time: 116.19
+
+Optimizer terminated. Time: 116.24  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 5.9015632849e+02    nrm: 5e+01    Viol.  con: 2e-07    var: 0e+00    acc: 6e-16    itg: 7e-07  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.55, probing time =  1.32
+Presolved problem: 8916 variables, 21708 constraints, 61629 non-zeros
+Presolved problem: 0 general integer, 874 binary, 8042 continuous
+Presolved problem: 874 cones
+Clique table size: 353
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.3485499809e+02     NA          3.9   
+Cut generation started.
+0        1        1        0        NA                   4.3485591093e+02     NA          12.1  
+0        2        1        0        NA                   4.3719247724e+02     NA          13.3  
+0        3        1        0        NA                   4.3787549518e+02     NA          15.4  
+Cut generation terminated. Time = 1.06
+6        12       7        2        NA                   4.5549556014e+02     NA          31.3  
+20       26       21       3        NA                   4.5687804239e+02     NA          39.0  
+32       38       33       4        NA                   4.5687804239e+02     NA          45.1  
+64       70       65       8        NA                   4.5687804239e+02     NA          60.6  
+128      135      113      16       NA                   4.5687804239e+02     NA          90.4  
+240      253      177      21       6.0386697330e+02     4.6153997079e+02     23.57       124.6 
+
+Objective of best integer solution : 6.038669732977e+02      
+Best objective bound               : 4.615399707881e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 41
+  Number of CMIR cuts              : 22
+  Number of implied bound cuts     : 19
+Number of branches                 : 240
+Number of relaxations solved       : 253
+Number of interior point iterations: 8566
+Number of simplex iterations       : 0
+Time spend presolving the root     : 2.55
+Time spend optimizing the root     : 1.03
+Mixed integer optimizer terminated. Time: 124.61
+
+Optimizer terminated. Time: 124.66  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.0386697330e+02    nrm: 5e+01    Viol.  con: 6e-09    var: 7e-17    acc: 9e-11    itg: 3e-09  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.52, probing time =  1.29
+Presolved problem: 8915 variables, 21711 constraints, 61636 non-zeros
+Presolved problem: 0 general integer, 874 binary, 8041 continuous
+Presolved problem: 874 cones
+Clique table size: 353
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.0806986090e+02     NA          4.4   
+Cut generation started.
+0        1        1        0        NA                   4.0806880600e+02     NA          13.4  
+0        2        1        0        NA                   4.1103792918e+02     NA          15.3  
+0        3        1        0        NA                   4.1188042093e+02     NA          17.0  
+Cut generation terminated. Time = 1.12
+6        12       7        2        NA                   4.2568153134e+02     NA          29.7  
+19       25       20       4        NA                   4.2833177151e+02     NA          37.4  
+33       39       34       5        NA                   4.2833177151e+02     NA          43.9  
+65       71       62       9        NA                   4.2833177151e+02     NA          59.9  
+121      126      112      16       NA                   4.2833177151e+02     NA          85.2  
+233      243      168      4        6.0707135656e+02     4.3226857618e+02     28.79       131.0 
+
+Objective of best integer solution : 6.070713565642e+02      
+Best objective bound               : 4.322685761843e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not em
