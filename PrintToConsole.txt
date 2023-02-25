@@ -776,3 +776,84 @@ Problem
   Disjunctive cons.      : 0               
   Cones                  : 0               
   Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 3.38, probing time =  1.94
+Presolved problem: 8993 variables, 21955 constraints, 62301 non-zeros
+Presolved problem: 0 general integer, 882 binary, 8111 continuous
+Presolved problem: 882 cones
+Clique table size: 359
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   3.9038205021e+02     NA          4.9   
+Cut generation started.
+0        1        1        0        NA                   3.9037588295e+02     NA          10.6  
+0        2        1        0        NA                   3.9114030210e+02     NA          12.2  
+Cut generation terminated. Time = 0.72
+8        13       9        3        NA                   3.9809605209e+02     NA          27.3  
+27       32       26       5        NA                   4.0065625388e+02     NA          37.4  
+51       61       38       7        NA                   4.0487382208e+02     NA          51.5  
+83       94       62       11       NA                   4.0487382208e+02     NA          66.3  
+139      149      92       15       NA                   4.0487382208e+02     NA          89.4  
+227      234      142      9        NA                   4.0572329293e+02     NA          122.6 
+361      367      204      22       6.1172786455e+02     4.0630521701e+02     33.58       165.9 
+
+Objective of best integer solution : 6.117278645490e+02      
+Best objective bound               : 4.063052170054e+02      
+Initial feasible solution objective: Undefined
+Construct solution objective       : Not employed
+User objective cut value           : Not employed
+Number of cuts generated           : 27
+  Number of CMIR cuts              : 9
+  Number of implied bound cuts     : 18
+Number of branches                 : 361
+Number of relaxations solved       : 367
+Number of interior point iterations: 14019
+Number of simplex iterations       : 0
+Time spend presolving the root     : 3.38
+Time spend optimizing the root     : 1.17
+Mixed integer optimizer terminated. Time: 165.94
+
+Optimizer terminated. Time: 166.00  
+
+
+Integer solution solution summary
+  Problem status  : PRIMAL_FEASIBLE
+  Solution status : PRIMAL_FEASIBLE
+  Primal.  obj: 6.1172786455e+02    nrm: 5e+01    Viol.  con: 6e-09    var: 5e-12    acc: 9e-11    itg: 1e-07  
+Problem
+  Name                   :                 
+  Objective sense        : minimize        
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 423987          
+  Affine conic cons.     : 14864           
+  Disjunctive cons.      : 0               
+  Cones                  : 0               
+  Scalar variables       : 208320          
+  Matrix variables       : 0               
+  Integer variables      : 14880           
+
+Optimizer started.
+Mixed integer optimizer started.
+Threads used: 8
+Presolve started.
+Presolve terminated. Time = 2.42, probing time =  1.20
+Presolved problem: 8183 variables, 19923 constraints, 56489 non-zeros
+Presolved problem: 0 general integer, 803 binary, 7380 continuous
+Presolved problem: 803 cones
+Clique table size: 340
+BRANCHES RELAXS   ACT_NDS  DEPTH    BEST_INT_OBJ         BEST_RELAX_OBJ       REL_GAP(%)  TIME  
+0        1        1        0        NA                   4.4692627824e+02     NA          3.9   
+Cut generation started.
+0        1        1        0        NA                   4.4693036792e+02     NA          9.6   
+0        2        1        0        NA                   4.5076120104e+02     NA          10.9  
+0        3        1        0        NA                   4.5187528780e+02     NA          12.3  
+0        4        1        0        NA                   4.5232802006e+02     NA          13.7  
+Cut generation terminated. Time = 1.27
+0        6        1        0        6.8473770223e+02     4.5232666255e+02     33.94       17.6  
+
+Objective of best integer solution : 6.847377022295e+02      
