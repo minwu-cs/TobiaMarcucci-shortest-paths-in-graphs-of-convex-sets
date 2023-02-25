@@ -1,6 +1,6 @@
 import numpy as np
 from pydrake.all import MathematicalProgram, SolverOptions, MosekSolver, eq, GurobiSolver
-
+from pydrake.solvers import CommonSolverOption
 
 class ShortestPathVariables():
 
@@ -158,6 +158,7 @@ class ShortestPathProblem():
         self.prog.AddLinearCost(sum(self.vars.l))
         self.solver_options = SolverOptions()
         self.solver_options.SetOption(MosekSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_SOLUTIONS", 1)
+        self.solver_options.SetOption(CommonSolverOption.kPrintToConsole, 1)
         # self.solver_options.SetOption(GurobiSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_SOLUTIONS", 1)
 
     def solve(self):
