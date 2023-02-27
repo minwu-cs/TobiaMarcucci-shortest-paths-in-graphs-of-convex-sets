@@ -32,18 +32,18 @@ def plot_terrain(q=None, u=None):
     plt.grid(1)
 
 # initial state
-# z1 = np.array([-3.5, .5, 0, 0])
-z1 = np.array([0.5, 0.5, 0, 0])
+z1 = np.array([-3.5, .5, 0, 0])
+#z1 = np.array([0.5, 0.5, 0, 0])
 q1 = z1[:2]
 
 # target set
-# zK = np.array([3.5, 6.5, 0, 0])
-zK = np.array([40.5, 0.5, 0, 0])
+zK = np.array([3.5, 6.5, 0, 0])
+#zK = np.array([40.5, 0.5, 0, 0])
 qK = zK[:2]
 Z = Singleton(zK)
 
 # time horizon
-K = 60
+K = 30
 
 # cost matrices
 q_dot_cost = .2 ** .5
@@ -65,31 +65,22 @@ for alpha in np.arange(39, 29, -2):
                 print(alpha, bravo, charlie, delta)
                 # configuration bounds
                 Dq = [
-                    Polyhedron.from_bounds([0, alpha], [10, alpha + 1]),
-                    Polyhedron.from_bounds([10, bravo], [20, bravo + 1]),
-                    Polyhedron.from_bounds([20, charlie], [30, charlie + 1]),
-                    Polyhedron.from_bounds([30, delta], [40, delta + 1]),
-
-                    Polyhedron.from_bounds([2, 17], [3, 18]),
-                    Polyhedron.from_bounds([12, 32], [13, 33]),
-                    Polyhedron.from_bounds([22, 4], [23, 5]),
-                    Polyhedron.from_bounds([32, 44], [33, 45]),
-                    Polyhedron.from_bounds([42, 7], [43, 8]),
-
-                    Polyhedron.from_bounds([0, 0], [2, 40]),
-                    Polyhedron.from_bounds([10, 0], [12, 40]),
-                    Polyhedron.from_bounds([20, 0], [22, 40]),
-                    Polyhedron.from_bounds([30, 0], [32, 40]),
-                    Polyhedron.from_bounds([40, 0], [42, 40]),
+                    Polyhedron.from_bounds([-4, 0], [3, 1]),
+                    Polyhedron.from_bounds([-6, 1], [-5, 3]),
+                    Polyhedron.from_bounds([4, 1], [5, 2]),
+                    Polyhedron.from_bounds([-4, 3], [4, 4]),
+                    Polyhedron.from_bounds([-5, 5], [-4, 6]),
+                    Polyhedron.from_bounds([5, 4], [6, 6]),
+                    Polyhedron.from_bounds([-3, 6], [4, 7])
                 ]
 
                 # velocity bounds
-                qdot_max = np.ones(2) * 3
+                qdot_max = np.ones(2) * 1
                 qdot_min = - qdot_max
                 Dqdot = Polyhedron.from_bounds(qdot_min, qdot_max)
 
                 # control bounds
-                u_max = np.ones(2) * 3
+                u_max = np.ones(2) * 1
                 u_min = - u_max
                 Du = Polyhedron.from_bounds(u_min, u_max)
 
@@ -113,22 +104,53 @@ for alpha in np.arange(39, 29, -2):
                 # pieceiwse affine system
                 pwa = PieceWiseAffineSystem(dynamics, domains)
 
+                var = 0
+                varToName = dict()
+
                 # initialize program
                 prog = MathematicalProgram()
 
                 # continuous decision variables
-                z = prog.NewContinuousVariables(K, 4)
-                u = prog.NewContinuousVariables(K - 1, 2)
+                z = []
+                for r in range(K):
+                    lst = []
+                    for c in range(4):
+                        lst.append(prog.NewContinuousVariables(1, f"z{c}@{r}")[0])
+                        var += 1
+                        varToName[f"X{var}"] = f"z{c}@{r}"
+                    z.append(lst)
+                z = np.array(z)
+                #z = prog.NewContinuousVariables(K, 4)
+                u = []
+                for r in range(K - 1):
+                    lst = []
+                    for c in range(2):
+                        lst.append(prog.NewContinuousVariables(1, f"u{c}@{r}")[0])
+                        var += 1
+                        varToName[f"X{var}"] = f"u{c}@{r}"
+                    u.append(lst)
+                u = np.array(u)
+                #u = prog.NewContinuousVariables(K - 1, 2)
+
                 q = z[:, :2]
                 qdot = z[:, 2:]
 
                 # indicator variables
-                b = prog.NewBinaryVariables(K - 1, len(Dq))
+                b = []
+                for r in range(K - 1):
+                    lst = []
+                    for c in range(len(Dq)):
+                        lst.append(prog.NewBinaryVariables(1, f"b{c}@{r}")[0])
+                        var += 1
+                        varToName[f"X{var}"] = f"b{c}@{r}"
+                    b.append(lst)
+                b = np.array(b)
+                #b = prog.NewBinaryVariables(K - 1, len(Dq))
 
                 # slack variables for the cost function
-                s = prog.NewContinuousVariables(K - 1, len(Dq))
-                prog.AddLinearConstraint(ge(s.flatten(), 0))
-                prog.AddLinearCost(sum(sum(s)))
+                #s = prog.NewContinuousVariables(K - 1, len(Dq))
+                #prog.AddLinearConstraint(ge(s.flatten(), 0))
+                prog.AddLinearCost(0)
 
                 # initial and terminal conditions
                 prog.AddLinearConstraint(eq(z[0], z1))
@@ -140,11 +162,42 @@ for alpha in np.arange(39, 29, -2):
 
                 # loop over time
                 for k in range(K - 1):
-
                     # auxiliary copies of state and the controls
-                    Z = prog.NewContinuousVariables(len(Dq), 4)
-                    U = prog.NewContinuousVariables(len(Dq), 2)
-                    Znext = prog.NewContinuousVariables(len(Dq), 4)
+                    Z = []
+                    for r in range(len(Dq)):
+                        lst = []
+                        for c in range(4):
+                            lst.append(prog.NewContinuousVariables(1, f"Z{r}_{c}@{k}")[0])
+                            var += 1
+                            varToName[f"X{var}"] = f"Z{r}_{c}@{k}"
+
+                        Z.append(lst)
+                    Z = np.array(Z)
+                    #Z = prog.NewContinuousVariables(len(Dq), 4)
+
+                    U = []
+                    for r in range(len(Dq)):
+                        lst = []
+                        for c in range(2):
+                            lst.append(prog.NewContinuousVariables(1, f"U{r}_{c}@{k}")[0])
+                            var += 1
+                            varToName[f"X{var}"] = f"U{r}_{c}@{k}"
+                        U.append(lst)
+                    U = np.array(U)
+                    #U = prog.NewContinuousVariables(len(Dq), 2)
+
+                    Znext = []
+                    for r in range(len(Dq)):
+                        lst = []
+                        for c in range(4):
+                            lst.append(prog.NewContinuousVariables(1, f"Znext{r}_{c}@{k}")[0])
+                            var += 1
+                            varToName[f"X{var}"] = f"Znext{r}_{c}@{k}"
+                        Znext.append(lst)
+                    Znext = np.array(Znext)
+
+                    #Znext = prog.NewContinuousVariables(len(Dq), 4)
+
                     Q = Z[:, :2]
                     Qdot = Z[:, 2:]
                     z_aux.append(Z)
@@ -179,3 +232,17 @@ for alpha in np.arange(39, 29, -2):
                 #solver_options.SetOption(MosekSolver().solver_id(), "MSK_DPAR_MIO_MAX_TIME", 1)
                 solver_options.SetOption(CommonSolverOption.kPrintToConsole, 1)
                 sol = MosekSolver().Solve(prog, solver_options=solver_options)
+                mps = open(filename, 'r').read().strip().split("\n")
+                print(varToName)
+                lines = []
+                for line in mps:
+                    for tok in line.split():
+                        if "X" in tok and tok in varToName:
+                            print(line)
+                            line = line.replace(tok, varToName[tok])
+                            print(line)
+                    lines.append(line)
+                with open(filename, 'w') as out_file:
+                    for line in lines:
+                        out_file.write(line + "\n")
+                exit(0)
