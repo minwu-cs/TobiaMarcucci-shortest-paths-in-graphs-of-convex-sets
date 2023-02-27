@@ -227,20 +227,17 @@ for alpha in np.arange(39, 29, -2):
                 solver_options = SolverOptions()
                 filename=f"{alpha}_{bravo}_{charlie}_{delta}.mps"
                 solver_options.SetOption(MosekSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_SOLUTIONS", 1)
-                solver_options.SetOption(MosekSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_BRANCHES", 1)
+                #solver_options.SetOption(MosekSolver().solver_id(), "MSK_IPAR_MIO_MAX_NUM_BRANCHES", 1)
                 solver_options.SetOption(MosekSolver().solver_id(), "writedata", filename)
                 #solver_options.SetOption(MosekSolver().solver_id(), "MSK_DPAR_MIO_MAX_TIME", 1)
                 solver_options.SetOption(CommonSolverOption.kPrintToConsole, 1)
                 sol = MosekSolver().Solve(prog, solver_options=solver_options)
                 mps = open(filename, 'r').read().strip().split("\n")
-                print(varToName)
                 lines = []
                 for line in mps:
                     for tok in line.split():
                         if "X" in tok and tok in varToName:
-                            print(line)
                             line = line.replace(tok, varToName[tok])
-                            print(line)
                     lines.append(line)
                 with open(filename, 'w') as out_file:
                     for line in lines:
