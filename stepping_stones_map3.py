@@ -13,9 +13,9 @@ import sys
 s = int(sys.argv[1])
 random.seed(s)
 # time horizon
-K = 50
+K = 25
 
-filename = f"map1_step50_seed{s}.mps"
+filename = f"map3_step25_seed{s}.mps"
 
 
 def plot_terrain(q=None, u=None):
@@ -26,7 +26,7 @@ def plot_terrain(q=None, u=None):
         # color = 'lightcoral' if i in [1, 5] else 'lightcyan'
         # color = 'lightcoral' if i in [0, 1] else 'lightcyan'
         color = 'lightcyan'
-        Dqi.plot(facecolor=color)
+        Dqi.plot(facecolor=color, alpha=min(1, Bs[i] + 0.4))
 
     plt.scatter(*q1, s=300, c='g', marker='+', zorder=2)
     plt.scatter(*qK, s=300, c='g', marker='x', zorder=2)
@@ -45,12 +45,12 @@ def plot_terrain(q=None, u=None):
 
 # initial state
 #z1 = np.array([-3.5, .5, 0, 0])
-z1 = np.array([3.5, random.uniform(0, 11), 0, 0])
+z1 = np.array([0.5, 0.5, 0, 0])
 q1 = z1[:2]
 
 # target set
 #zK = np.array([3.5, 6.5, 0, 0])
-zK = np.array([30.5, random.uniform(2, 9), 0, 0])
+zK = np.array([6.5, 6.5, 0, 0])
 qK = zK[:2]
 Z = Singleton(zK)
 
@@ -64,30 +64,13 @@ S = Q # ininfluential
 cost_matrices = (Q, R, S)
 
 
-
-
+B1 = [0, 0]
 # configuration bounds
-Dq = [
-    Polyhedron.from_bounds([3, 0], [4, 11]),
-    Polyhedron.from_bounds([12.5, 2], [13.5, 8]),
-    Polyhedron.from_bounds([15, 0], [16, 11]),
-
-    Polyhedron.from_bounds([5, 10], [14, 11]),
-    Polyhedron.from_bounds([5, 7], [11.5, 8]),
-    Polyhedron.from_bounds([5, 0], [14, 1]),
-
-    Polyhedron.from_bounds([16.5, 6], [17.5, 7.5]),
-    Polyhedron.from_bounds([16.5, 3], [17.5, 4.5]),
-
-    Polyhedron.from_bounds([18, 0], [19, 11]),
-
-
-    Polyhedron.from_bounds([26.5, 5], [27.5, 9]),
-    Polyhedron.from_bounds([30, 2], [31, 9]),
-    Polyhedron.from_bounds([20, 10], [30, 11]),
-    Polyhedron.from_bounds([20, 3], [27.5, 4]),
-    Polyhedron.from_bounds([20, 0], [30, 1]),
-]
+Dq = []
+for i in range(5):
+    for j in range(5):
+        B = [B1[0] + i * 1.5, B1[1] + j * 1.5]
+        Dq.append(Polyhedron.from_bounds(B, [B[0] + 1, B[1] + 1]))
 
 # velocity bounds
 qdot_max = np.ones(2) * 1
@@ -110,11 +93,15 @@ A = np.array([
     [0, 0, 0, 1]
 ])
 B = np.vstack((np.zeros((2, 2)), np.eye(2)))
+
+Bs = [0.25] * 5 + [1] * 20
+random.shuffle(Bs)
+
 #Bred = B / 10
 # Bred = B / 1000
 # Bred = B / 1
 c = np.zeros(4)
-dynamics = [(A, B, c) for i in range(len(domains))]
+dynamics = [(A, Bs[i] * B, c) for i in range(len(domains))]
 
 # pieceiwse affine system
 pwa = PieceWiseAffineSystem(dynamics, domains)
@@ -265,10 +252,10 @@ with open(filename, 'w') as out_file:
         out_file.write(line + "\n")
 # plot solution
 # plt.figure(figsize=(4, 3))
-plt.figure(figsize=(10, 22))
+plt.figure(figsize=(4, 4))
 plot_terrain(q, u)
-plt.xticks(range(-2, 36))
-plt.yticks(range(-2, 20))
+plt.xticks(range(-1, 17))
+plt.yticks(range(-1, 13))
 
 figure_name = f'{filename}.png'
 plt.savefig(figure_name, bbox_inches='tight')
