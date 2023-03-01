@@ -265,10 +265,12 @@ with open(filename, 'w') as out_file:
         out_file.write(line + "\n")
 # plot solution
 # plt.figure(figsize=(4, 3))
-plt.figure(figsize=(8, 12))
+plt.figure(figsize=(12, 14))
 plot_terrain(q, u)
-plt.xticks(range(2, 32))
-plt.yticks(range(-1, 13))
+plt.xticks(range(2, 32, 2))
+plt.yticks(range(-1, 13, 2))
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 
 figure_name = f'{filename}.png'
 plt.savefig(figure_name, bbox_inches='tight')

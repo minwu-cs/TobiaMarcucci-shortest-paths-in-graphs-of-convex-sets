@@ -24,9 +24,12 @@ def plot_terrain(q=None, u=None):
 
     for i, Dqi in enumerate(Dq):
         # color = 'lightcoral' if i in [1, 5] else 'lightcyan'
-        # color = 'lightcoral' if i in [0, 1] else 'lightcyan'
-        color = 'lightcyan'
-        Dqi.plot(facecolor=color, alpha=min(1, Bs[i] + 0.4))
+        color = 'lightcyan' if Bs[i] == 1 else 'lightcoral'
+        Dqi.plot(facecolor=color)
+        # Dqi.plot(facecolor=color, alpha=min(1, Bs[i] + 0.4))
+        # print(i)
+        # print(Bs[i])
+
 
     plt.scatter(*q1, s=300, c='g', marker='+', zorder=2)
     plt.scatter(*qK, s=300, c='g', marker='x', zorder=2)
@@ -256,6 +259,8 @@ plt.figure(figsize=(4, 4))
 plot_terrain(q, u)
 plt.xticks(range(-1, 9))
 plt.yticks(range(-1, 9))
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 
 figure_name = f'{filename}.png'
 plt.savefig(figure_name, bbox_inches='tight')
