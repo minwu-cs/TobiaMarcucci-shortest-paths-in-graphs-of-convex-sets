@@ -38,8 +38,8 @@ def plot_terrain(q=None, u=None):
             for t, ut in enumerate(u):
                 plt.arrow(*q[t], *ut, color='b', head_starts_at_zero=0, head_width=.15, head_length=.3)
 
-    plt.xlabel(r'$q_1, w_1$')
-    plt.ylabel(r'$q_2, w_2$')
+    # plt.xlabel(r'$q_1, w_1$')
+    # plt.ylabel(r'$q_2, w_2$')
     plt.grid(1)
 
 
@@ -265,10 +265,10 @@ with open(filename, 'w') as out_file:
         out_file.write(line + "\n")
 # plot solution
 # plt.figure(figsize=(4, 3))
-plt.figure(figsize=(10, 22))
+plt.figure(figsize=(8, 12))
 plot_terrain(q, u)
-plt.xticks(range(-2, 36))
-plt.yticks(range(-2, 20))
+plt.xticks(range(2, 32))
+plt.yticks(range(-1, 13))
 
 figure_name = f'{filename}.png'
 plt.savefig(figure_name, bbox_inches='tight')
