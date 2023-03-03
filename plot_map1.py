@@ -13,9 +13,9 @@ import sys
 s = int(sys.argv[1])
 random.seed(s)
 # time horizon
-K = 38
+K = 36
 
-filename = f"map1_step50_seed{s}.mps"
+filename = f"map1_step36_seed{s}.mps"
 
 
 def plot_terrain(q=None, u=None):
@@ -49,8 +49,9 @@ z1 = np.array([3.5, random.uniform(7, 8), 0, 0])
 q1 = z1[:2]
 
 # target set
-#zK = np.array([3.5, 6.5, 0, 0])
 zK = np.array([30.5, random.uniform(4, 5), 0, 0])
+
+#zK = np.array([30.5, random.uniform(2, 3), 0, 0])
 qK = zK[:2]
 Z = Singleton(zK)
 
@@ -287,15 +288,32 @@ u = np.array(u)
 print(q, u)
 os.remove("solution.txt")
 
-# plot solution
-# plt.figure(figsize=(4, 3))
-plt.figure(figsize=(12, 14))
-plot_terrain(q, u)
-plt.xticks(range(2, 32, 2))
-plt.yticks(range(-1, 13, 2))
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
+if not os.path.isdir("map1_pics"):
+    os.mkdir("map1_pics")
 
-figure_name = f'{filename}.png'
-plt.savefig(figure_name, bbox_inches='tight')
-plt.close()
+if os.path.isfile("map1.gif"):
+    os.remove("map1.gif")
+
+for i in range(0, len(q)):
+    # plot solution
+    # plt.figure(figsize=(4, 3))
+    plt.figure(figsize=(12, 14))
+
+    plt.xlim(2, 32)
+    plt.ylim(-1, 12)
+    plt.xticks(range(2, 32, 2))
+    plt.yticks(range(-1, 13, 2))
+    plt.xticks(fontsize=20)
+    plt.yticks(fontsize=20)
+    plot_terrain(q[:i+1], u[:i+1])
+
+    if i+1 < 10:
+        index = f"00{i+1}"
+    else:
+        index = f"0{i+1}"
+    figure_name = f'map1_pics/{filename}_{index}.png'
+    plt.savefig(figure_name, bbox_inches='tight')
+    plt.close()
+
+import subprocess as sub
+sub.run(f"ffmpeg -i map1_pics/{filename}_%03d.png map1.gif".split())

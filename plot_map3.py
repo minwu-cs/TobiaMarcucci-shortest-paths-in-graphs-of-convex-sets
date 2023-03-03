@@ -13,16 +13,18 @@ import sys
 s = int(sys.argv[1])
 random.seed(s)
 # time horizon
-K = 16
+K = 18
 
-filename = f"map3_step25_seed{s}.mps"
+filename = f"map3_step18_seed{s}.mps"
 
+#B = 3
+#B = 9
 
 def plot_terrain(q=None, u=None):
     plt.rc('axes', axisbelow=True)
     plt.gca().set_aspect('equal')
 
-    for i, Dqi in enumerate(Dq):
+    for i, Dqi in enumerate(DqAll):
         # color = 'lightcoral' if i in [1, 5] else 'lightcyan'
         color = 'lightcyan' if Bs[i] == 1 else 'lightcoral'
         Dqi.plot(facecolor=color)
@@ -39,6 +41,8 @@ def plot_terrain(q=None, u=None):
 
         if u is not None:
             for t, ut in enumerate(u):
+                if t < 2:
+                    continue
                 plt.arrow(*q[t], *ut, color='b', head_starts_at_zero=0, head_width=.15, head_length=.3)
 
     # plt.xlabel(r'$q_1, w_1$')
@@ -67,13 +71,21 @@ S = Q # ininfluential
 cost_matrices = (Q, R, S)
 
 
+Bs = [0.2] * 5 + [1] * 20
+random.shuffle(Bs)
+print(Bs)
+#Bs = [1, 1, 1, 1, 0.2, 1, 1, 1, 1, 1, 1, 1, 0.2, 1, 1, 1, 0.2, 0.2, 1, 1, 1, 0.2, 1, 1, 1]
+#Bs = [1, 1, 1, 1, 1, 1, 1, 1, 0.2, 1, 1, 0.2, 1, 1, 1, 1, 1, 1, 1, 1, 0.2, 0.2, 1, 0.2, 1]
 B1 = [0, 0]
 # configuration bounds
 Dq = []
+DqAll = []
 for i in range(5):
     for j in range(5):
         B = [B1[0] + i * 1.5, B1[1] + j * 1.5]
-        Dq.append(Polyhedron.from_bounds(B, [B[0] + 1, B[1] + 1]))
+        DqAll.append(Polyhedron.from_bounds(B, [B[0] + 1, B[1] + 1]))
+        if Bs[5 * i + j] == 1:
+            Dq.append(Polyhedron.from_bounds(B, [B[0] + 1, B[1] + 1]))
 
 # velocity bounds
 qdot_max = np.ones(2) * 0.5
@@ -97,8 +109,10 @@ A = np.array([
 ])
 B = np.vstack((np.zeros((2, 2)), np.eye(2)))
 
-Bs = [0.2] * 5 + [1] * 20
-random.shuffle(Bs)
+#Bs = [1, 1, 1, 1, 1, 1, 1, 1, 0.2, 1, 1, 0.2, 1, 1, 1, 1, 1, 1, 1, 1, 0.2, 0.2, 1, 0.2, 1]
+#random.shuffle(Bs)
+
+#print(Bs)
 
 #Bred = B / 10
 # Bred = B / 1000
@@ -279,15 +293,32 @@ u = np.array(u)
 print(q, u)
 os.remove("solution.txt")
 
-# plot solution
-# plt.figure(figsize=(4, 3))
-plt.figure(figsize=(4, 4))
-plot_terrain(q, u)
-plt.xticks(range(-1, 9))
-plt.yticks(range(-1, 9))
-plt.xticks(fontsize=20)
-plt.yticks(fontsize=20)
+if not os.path.isdir("map3_pics"):
+    os.mkdir("map3_pics")
+if os.path.isfile("map3.gif"):
+    os.remove("map3.gif")
 
-figure_name = f'{filename}.png'
-plt.savefig(figure_name, bbox_inches='tight')
-plt.close()
+for i in range(0, len(q)):
+    # plot solution
+    # plt.figure(figsize=(4, 3))
+    plt.figure(figsize=(12, 14))
+
+    plt.xlim(-1, 9)
+    plt.ylim(-1, 9)
+    plt.xticks(range(-1, 9))
+    plt.yticks(range(-1, 9))
+    plt.xticks(fontsize=20)
+    plt.yticks(fontsize=20)
+    plot_terrain(q[:i+1], u[:i+1])
+
+    if i+1 < 10:
+        index = f"00{i+1}"
+    else:
+        index = f"0{i+1}"
+    figure_name = f'map3_pics/{filename}_{index}.png'
+    plt.savefig(figure_name, bbox_inches='tight')
+    plt.close()
+
+import subprocess as sub
+
+sub.run(f"ffmpeg -i map3_pics/{filename}_%03d.png map3.gif".split())
